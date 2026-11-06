@@ -12,4 +12,4 @@ Entre el 1 de junio y el 31 de julio de 2026 se entregaron 159 101 pasaportes co
 
 Es de esas cosas que no quisiera que se repitan, ni para mí ni para ningún ciudadano.
 
-¿Qué trámite del Estado le ha costado más tiempo a usted o a su familia?
+Si tuviera que elegir un solo trámite del Estado para rediseñar mañana, ¿cuál sería?
