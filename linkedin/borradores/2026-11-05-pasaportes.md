@@ -8,7 +8,7 @@ A fines de 2025, ese era el plazo para conseguirlo en el Perú. En ese vacío cr
 
 En abril de 2026 asumí la Superintendencia Nacional de Migraciones y rediseñé el proceso completo, por fuera y por dentro. Para el ciudadano, se eliminó la cita virtual previa: presenta y escanea el QR de su DNI, recibe un ticket por orden de llegada y paga en la misma sede con billetera electrónica.
 
-Por dentro, yo mismo diseñé e implementé los cambios. Modifiqué y conecté los scripts entre los sistemas internos y con el servicio web de una importante entidad bancaria, que es lo que hace funcionar el pago con billeteras electrónicas. Con eso, los datos pasan a una base de datos, se hace el enrolamiento biométrico y se revisa la calidad en producción antes de entregar el documento, en menos de una hora. Se acabaron las colas y las citas virtuales.
+Por dentro, el diseño fue mío. Era un camino nuevo para la institución, así que reuní al equipo de TI y les mostré cómo debían modificarse y conectarse los scripts entre los sistemas internos y con el servicio web de una importante entidad bancaria, que es lo que hace funcionar el pago con billeteras electrónicas. Escuché sus opiniones, las incorporamos y empezamos los cambios con el apoyo de la gerencia y del equipo de TI desde el principio. Con eso, los datos pasan a una base de datos, se hace el enrolamiento biométrico y se revisa la calidad en producción antes de entregar el documento, en menos de una hora. Se acabaron las colas y las citas virtuales.
 
 Entre el 1 de junio y el 31 de julio de 2026 se entregaron 159 101 pasaportes con este modelo, según información oficial de Migraciones.
 
