@@ -2,7 +2,7 @@
 
 Estado: borrador para revisión. NO publicado.
 
-De 6 o 7 meses de espera por un pasaporte a recibirlo en una hora.
+De 6 o 7 meses de espera por un pasaporte a recibirlo en menos de una hora.
 
 A fines de 2025, ese era el plazo para conseguirlo en el Perú. En ese vacío creció el negocio de los tramitadores. Cobraban más de 200 soles solo por una cita virtual, sobre una tasa oficial de 120,90 soles. Quien tenía urgencia de viajar se trasladaba a otra provincia, y al costo del trámite se sumaban pasajes, comida, hospedaje y, muchas veces, pagos indebidos. Cuando obtener un documento depende de cuánto puede pagar la persona, se afecta su derecho al libre tránsito.
 
