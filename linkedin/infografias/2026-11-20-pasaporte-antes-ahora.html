@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pasaporte: antes y ahora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+<style>
+  :root {
+    --fondo: #0f0f10;
+    --texto: #f5f5f4;
+    --suave: #a8a29e;
+    --linea: #2a2a2d;
+    --acento: #f97316;
+    --fuente: "Inter", system-ui, sans-serif;
+    --firma: "Juan Ramiro Alvarado Gómez";
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #d6d3d1; font-family: var(--fuente); }
+  .img {
+    width: 1080px; height: 1350px; padding: 90px 90px 180px;
+    background: var(--fondo); color: var(--texto);
+    display: flex; flex-direction: column; gap: 36px;
+    position: relative; overflow: hidden;
+    margin: 40px auto; box-shadow: 0 10px 40px rgba(0,0,0,.25);
+  }
+  .img::after { content: var(--firma); position: absolute; left: 90px; bottom: 60px; font-size: 28px; color: var(--suave); }
+  .fuente { position: absolute; right: 90px; bottom: 60px; font-size: 24px; color: var(--suave); max-width: 520px; text-align: right; line-height: 1.25; }
+  .etiqueta { font-size: 30px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--acento); }
+  h1 { font-size: 72px; line-height: 1.06; font-weight: 800; letter-spacing: -0.02em; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; flex: 1; }
+  .col { border: 3px solid var(--linea); border-radius: 28px; padding: 40px 32px; display: flex; flex-direction: column; gap: 30px; }
+  .col.bien { border-color: var(--acento); }
+  .col h2 { font-size: 36px; letter-spacing: .06em; text-transform: uppercase; color: var(--suave); }
+  .col.bien h2 { color: var(--acento); }
+  .grande { white-space: nowrap; font-size: 70px; line-height: 1; font-weight: 800; letter-spacing: -0.03em; }
+  .col.bien .grande { color: var(--acento); }
+  .grande small { display: block; font-size: 34px; font-weight: 600; letter-spacing: 0; color: var(--suave); margin-top: 10px; }
+  .col p { font-size: 38px; line-height: 1.3; }
+  .col p b { font-weight: 800; }
+  .sep { height: 3px; background: var(--linea); }
+  @media screen { .img { zoom: .45; } }
+  @page { size: 1080px 1350px; margin: 0; }
+  @media print { body { background: none; } .img { margin: 0; box-shadow: none; zoom: 1; break-after: page; } }
+</style>
+</head>
+<body>
+<section class="img" id="lienzo">
+  <span class="etiqueta">Pasaporte · Perú</span>
+  <h1>De 6 o 7 meses de espera a menos de una hora</h1>
+  <div class="cols">
+    <div class="col">
+      <h2>Fines de 2025</h2>
+      <div class="grande">6–7 meses<small>de espera</small></div>
+      <div class="sep"></div>
+      <p>Cita virtual en manos de tramitadores: <b>más de 200 soles</b></p>
+      <p>Tasa oficial: <b>120,90 soles</b></p>
+    </div>
+    <div class="col bien">
+      <h2>Hoy</h2>
+      <div class="grande">&lt; 1 hora<small>de entrega</small></div>
+      <div class="sep"></div>
+      <p>Sin cita previa: <b>orden de llegada</b></p>
+      <p>Pago en la misma sede con <b>billetera electrónica</b></p>
+      <p><b>159 101</b> pasaportes entregados entre junio y julio de 2026</p>
+    </div>
+  </div>
+  <span class="fuente">Fuente: información oficial de Migraciones</span>
+</section>
+</body>
+</html>
