@@ -1,0 +1,119 @@
+:root {
+  --ink: #121110;
+  --ink-2: #1E1B18;
+  --paper: #F5F2EC;
+  --on-dark: #F5F2EC;
+  --soft-dark: #B8B0A4;
+  --on-light: #161513;
+  --soft-light: #5B554D;
+  --amber: #E2A85B;
+  --amber-deep: #8F5414;
+}
+
+body { font-family: 'DM Sans', Arial, sans-serif; font-size: 32px; line-height: 1.35; }
+
+section {
+  padding: 128px 128px 160px;
+  box-sizing: border-box;
+  counter-increment: page;
+  display: flex;
+  flex-direction: column;
+}
+.dark { background: var(--ink); color: var(--on-dark); }
+.light { background: var(--paper); color: var(--on-light); }
+.cover { background: radial-gradient(circle, #2B241D, #121110); padding: 128px; justify-content: center; align-items: center; text-align: center; }
+.center { justify-content: center; align-items: center; text-align: center; }
+
+/* Type */
+.eyebrow { font-family: 'Oswald', Arial, sans-serif; font-weight: 500; font-size: 28px; letter-spacing: 6px; text-transform: uppercase; }
+.dark .eyebrow { color: var(--amber); }
+.light .eyebrow { color: var(--amber-deep); }
+.display { font-family: 'Michroma', Arial, sans-serif; font-weight: 400; text-transform: uppercase; line-height: 1.15; letter-spacing: 4px; }
+h1.display { font-size: 112px; }
+h2.display { font-size: 88px; }
+.lead { font-size: 44px; line-height: 1.25; font-weight: 500; }
+.body { font-size: 32px; line-height: 1.4; }
+.dark .soft { color: var(--soft-dark); }
+.light .soft { color: var(--soft-light); }
+.head { display: flex; flex-direction: column; gap: 16px; }
+
+/* Outline tag, like the site's button */
+.tag { font-family: 'Oswald', Arial, sans-serif; font-weight: 500; font-size: 28px; letter-spacing: 4px; text-transform: uppercase; padding: 20px 44px; display: inline-block; }
+.dark .tag { border: 2px solid var(--on-dark); }
+.light .tag { border: 2px solid var(--on-light); }
+
+/* Footer band */
+.foot { position: absolute; left: 128px; bottom: 64px; width: 1664px; display: flex; justify-content: space-between; }
+.foot p { font-family: 'Oswald', Arial, sans-serif; font-size: 24px; letter-spacing: 4px; text-transform: uppercase; }
+.dark .foot p { color: var(--soft-dark); }
+.light .foot p { color: var(--soft-light); }
+.pg::after { content: counter(page); }
+
+/* Counters */
+@property --n { syntax: '<integer>'; inherits: false; initial-value: 0 }
+@keyframes count { from { --n: 0 } }
+.n { font-family: 'Michroma', Arial, sans-serif; line-height: 1.1; animation: count 1.8s ease-out both; animation-delay: .3s; }
+.dark .n { color: var(--amber); }
+.light .n { color: var(--amber-deep); }
+
+/* Motion */
+@keyframes rise { from { opacity: 0; transform: translateY(40px); } }
+@keyframes blurin { from { opacity: 0; filter: blur(18px); transform: translateY(24px); } }
+@keyframes grow { from { opacity: 0; transform: translateY(160px); } }
+@keyframes fadein { from { opacity: 0; } }
+.a { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i, 0) * 140ms); }
+.b { animation: blurin 1.1s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i, 0) * 160ms); }
+.g { animation: grow .9s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i, 0) * 180ms); }
+.f { animation: fadein 1.6s ease-out both; animation-delay: calc(var(--i, 0) * 140ms); }
+
+/* Slide 2: objections */
+.quotes { display: flex; gap: 48px; margin-top: auto; }
+.quote { flex: 1; border-top: 4px solid var(--on-light); padding-top: 32px; display: flex; flex-direction: column; gap: 24px; }
+.quote .num { font-family: 'Michroma', Arial, sans-serif; font-size: 88px; line-height: 1.1; color: var(--amber-deep); }
+.quote .say { font-size: 56px; line-height: 1.2; font-weight: 500; }
+
+/* Slide 3 */
+.big { font-size: 220px; }
+
+/* Slide 4: staircase */
+.stairs { display: flex; gap: 32px; align-items: flex-end; margin-top: auto; }
+.step { flex: 1; background: var(--on-light); color: var(--on-dark); padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; }
+.step.s1 { height: 340px; }
+.step.s2 { height: 460px; }
+.step.s3 { height: 580px; background: var(--amber); color: var(--on-light); }
+.step .num { font-family: 'Michroma', Arial, sans-serif; font-size: 44px; }
+.step .verb { font-family: 'Oswald', Arial, sans-serif; font-weight: 600; font-size: 44px; letter-spacing: 4px; text-transform: uppercase; }
+.step .line { font-size: 32px; line-height: 1.35; }
+.step.s1 .line, .step.s2 .line { color: var(--soft-dark); }
+
+/* Slide 5: chat */
+.chat { display: flex; flex-direction: column; gap: 28px; margin-top: auto; }
+.bubble { font-size: 36px; line-height: 1.3; padding: 26px 40px; max-width: 1100px; }
+.me { align-self: flex-end; background: var(--paper); color: var(--on-light); }
+.ai { align-self: flex-start; background: var(--ink-2); color: var(--on-dark); border-left: 4px solid var(--amber); }
+.who { font-family: 'Oswald', Arial, sans-serif; font-size: 24px; letter-spacing: 4px; text-transform: uppercase; color: var(--soft-dark); }
+.who.right { align-self: flex-end; }
+
+/* Slide 6: one idea, many outputs */
+.toprow { display: flex; justify-content: space-between; align-items: flex-end; }
+.stat { display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
+.stat .n { font-size: 140px; }
+.stat .cap { font-size: 28px; color: var(--soft-light); }
+.fan { position: relative; width: 1664px; height: 520px; margin-top: auto; }
+.src { position: absolute; left: 0; top: 180px; width: 360px; height: 160px; box-sizing: border-box; background: var(--on-light); color: var(--on-dark); display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.src .t { font-family: 'Michroma', Arial, sans-serif; font-size: 40px; letter-spacing: 2px; }
+.src .s { font-size: 24px; color: var(--soft-dark); }
+.out { position: absolute; left: 1184px; width: 480px; height: 80px; box-sizing: border-box; border: 2px solid var(--on-light); display: flex; align-items: center; padding: 0 32px; }
+.out p { font-family: 'Oswald', Arial, sans-serif; font-weight: 500; font-size: 32px; letter-spacing: 3px; text-transform: uppercase; }
+
+/* Slide 7: automation flow */
+.flow { position: relative; width: 1664px; height: 260px; margin-top: 56px; }
+.node { position: absolute; top: 0; width: 344px; height: 260px; box-sizing: border-box; border: 2px solid rgba(245,242,236,.3); padding: 36px 32px; display: flex; flex-direction: column; gap: 24px; }
+.node x-icon { width: 48px; height: 48px; color: var(--amber); }
+.node p { font-size: 32px; line-height: 1.3; }
+.node.you { background: var(--amber); border: 2px solid var(--amber); color: var(--on-light); }
+.node.you x-icon { color: var(--on-light); }
+.node.you p { font-weight: 700; }
+.hours { display: flex; align-items: center; gap: 56px; margin-top: auto; }
+.hours .n { font-size: 140px; white-space: nowrap; }
+.hours .txt { font-size: 36px; line-height: 1.35; }

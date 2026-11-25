@@ -1,0 +1,19 @@
+<section id="portada" class="dark cover" data-transition="fade">
+<x-embed style="position:absolute; left:0; top:0; width:1920px; height:1080px"><!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;height:100%;overflow:hidden;background:transparent}canvas{display:block;width:100%;height:100%}</style></head><body><canvas id="c"></canvas><script>
+var c=document.getElementById('c'),x=c.getContext('2d'),W,H,P=[],N=110,D=170;
+var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function r(){W=c.width=innerWidth;H=c.height=innerHeight}r();addEventListener('resize',r);
+for(var i=0;i<N;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.45,vy:(Math.random()-.5)*.45,r:Math.random()*2.2+.6});
+function f(){x.clearRect(0,0,W,H);
+for(var i=0;i<N;i++){var p=P[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+for(i=0;i<N;i++)for(var j=i+1;j<N;j++){var a=P[i],b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<D){x.strokeStyle='rgba(226,168,91,'+((1-d/D)*.35)+')';x.lineWidth=1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
+for(i=0;i<N;i++){x.fillStyle='rgba(245,242,236,.75)';x.beginPath();x.arc(P[i].x,P[i].y,P[i].r,0,7);x.fill()}
+if(!still)requestAnimationFrame(f)}f();
+</script></body></html></x-embed>
+<p class="eyebrow b" style="--i:0">Charla para emprendedores</p>
+<h1 class="display b" style="--i:1; margin-top:40px">Los 3 niveles<br>de la IA</h1>
+<p class="lead soft b" style="--i:3; margin-top:40px; font-weight:400">De mirarla desde fuera a trabajar con ella cada día.</p>
+<p class="tag b" style="--i:5; margin-top:64px">Preguntar · Crear · Automatizar</p>
+<p class="eyebrow b" style="--i:6; margin-top:56px; color:#F5F2EC">Juan Ramiro Alvarado Gómez</p>
+<aside>0:00–0:30. Bienvenida. Una pregunta a la sala: ¿quién ha usado ya la IA esta semana? Que levanten la mano. Hoy vamos a ver tres niveles, de menos a más, y al final cada uno sabrá en cuál está y cuál es su siguiente paso.</aside>
+</section>
