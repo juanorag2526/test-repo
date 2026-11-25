@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plan MYPE en vivo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Oswald:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap">
+<style>html,body{margin:0;height:100%;background:#0A0908}
+/* ===== Deck (shared with the downloaded file) ===== */
+.jr-deck { position: relative; width: 1920px; height: 1080px; font-family: "DM Sans", Arial, sans-serif; }
+.jr-deck * { box-sizing: border-box; }
+.jr-deck p, .jr-deck h1, .jr-deck h2, .jr-deck h3 { margin: 0; }
+.jr-deck .slide { position: absolute; inset: 0; padding: 128px 128px 160px; display: flex; flex-direction: column; overflow: hidden; opacity: 0; visibility: hidden; transition: opacity .5s ease, visibility 0s linear .5s; font-size: 32px; line-height: 1.35; }
+.jr-deck .slide.on { opacity: 1; visibility: visible; transition: opacity .5s ease; }
+.jr-deck.static .slide { opacity: 1; visibility: visible; transition: none; }
+.jr-deck .dark { background: #121110; color: #F5F2EC; }
+.jr-deck .light { background: #F5F2EC; color: #161513; }
+.jr-deck .cover { padding: 128px; justify-content: center; align-items: center; text-align: center; }
+.jr-deck .dark.cover { background: radial-gradient(circle, #2B241D, #121110 70%); }
+.jr-deck .center { justify-content: center; align-items: center; text-align: center; }
+.jr-deck canvas.particles { position: absolute; inset: 0; width: 100%; height: 100%; }
+.jr-deck .slide > *:not(canvas):not(.foot) { position: relative; }
+.jr-deck .eyebrow { font-family: "Oswald", Arial, sans-serif; font-weight: 500; font-size: 28px; letter-spacing: 6px; text-transform: uppercase; }
+.jr-deck .dark .eyebrow { color: #E2A85B; } .jr-deck .light .eyebrow { color: #8F5414; }
+.jr-deck .display { font-family: "Michroma", Arial, sans-serif; font-weight: 400; text-transform: uppercase; line-height: 1.15; letter-spacing: 4px; }
+.jr-deck .lead { font-size: 44px; line-height: 1.25; font-weight: 500; }
+.jr-deck .dark .soft { color: #B8B0A4; } .jr-deck .light .soft { color: #5B554D; }
+.jr-deck .head { display: flex; flex-direction: column; gap: 16px; max-width: 1664px; }
+.jr-deck .tag { font-family: "Oswald", Arial, sans-serif; font-weight: 500; font-size: 28px; letter-spacing: 4px; text-transform: uppercase; padding: 20px 44px; display: inline-block; }
+.jr-deck .dark .tag { border: 2px solid #F5F2EC; } .jr-deck .light .tag { border: 2px solid #161513; }
+.jr-deck .signature { font-family: "Oswald", Arial, sans-serif; font-weight: 500; font-size: 28px; letter-spacing: 6px; text-transform: uppercase; }
+.jr-deck .foot { position: absolute; left: 128px; bottom: 64px; width: 1664px; display: flex; justify-content: space-between; }
+.jr-deck .foot p { font-family: "Oswald", Arial, sans-serif; font-size: 24px; letter-spacing: 4px; text-transform: uppercase; }
+.jr-deck .dark .foot p { color: #B8B0A4; } .jr-deck .light .foot p { color: #5B554D; }
+.jr-deck .n { font-family: "Michroma", Arial, sans-serif; line-height: 1.1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.jr-deck .dark .n { color: #E2A85B; } .jr-deck .light .n { color: #8F5414; }
+.jr-deck .statement { font-size: 60px; line-height: 1.2; font-weight: 500; max-width: 1500px; margin-top: auto; }
+.jr-deck .cols { display: flex; gap: 48px; margin-top: auto; }
+.jr-deck .col { flex: 1; min-width: 0; padding-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+.jr-deck .light .col { border-top: 4px solid #161513; } .jr-deck .dark .col { border-top: 4px solid #F5F2EC; }
+.jr-deck .col .num { font-family: "Michroma", Arial, sans-serif; font-size: 64px; line-height: 1.1; }
+.jr-deck .light .col .num { color: #8F5414; } .jr-deck .dark .col .num { color: #E2A85B; }
+.jr-deck .col h3 { font-size: 44px; line-height: 1.2; font-weight: 700; }
+.jr-deck .col p.t { font-size: 32px; line-height: 1.35; }
+.jr-deck .stairs { display: flex; gap: 32px; align-items: flex-end; margin-top: auto; }
+.jr-deck .stp { flex: 1; min-width: 0; padding: 40px; display: flex; flex-direction: column; gap: 14px; }
+.jr-deck .light .stp { background: #161513; color: #F5F2EC; } .jr-deck .dark .stp { background: #1E1B18; color: #F5F2EC; border: 2px solid rgba(245,242,236,.16); }
+.jr-deck .stp.top { background: #E2A85B !important; color: #161513 !important; border-color: #E2A85B !important; }
+.jr-deck .stp .num { font-family: "Michroma", Arial, sans-serif; font-size: 44px; }
+.jr-deck .stp h3 { font-family: "Oswald", Arial, sans-serif; font-weight: 600; font-size: 40px; letter-spacing: 3px; text-transform: uppercase; line-height: 1.15; }
+.jr-deck .stp p.t { font-size: 30px; line-height: 1.35; opacity: .82; }
+.jr-deck .flow { position: relative; width: 1664px; height: 260px; margin-top: auto; }
+.jr-deck .flow > * { position: absolute; }
+.jr-deck .node { top: 0; height: 260px; padding: 36px 28px; display: flex; flex-direction: column; justify-content: center; }
+.jr-deck .dark .node { border: 2px solid rgba(245,242,236,.3); } .jr-deck .light .node { border: 2px solid #161513; }
+.jr-deck .node p { font-size: 34px; line-height: 1.25; font-weight: 500; }
+.jr-deck .node .k { font-family: "Oswald", Arial, sans-serif; font-size: 24px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; font-weight: 500; }
+.jr-deck .dark .node .k { color: #E2A85B; } .jr-deck .light .node .k { color: #8F5414; }
+.jr-deck .node.end { background: #E2A85B; border-color: #E2A85B; color: #161513; }
+.jr-deck .node.end .k { color: #161513; }
+.jr-deck .big { font-size: 220px; }
+.jr-deck .src { font-size: 24px; margin-top: 28px; }
+.jr-deck .qt { font-size: 76px; line-height: 1.2; font-weight: 500; max-width: 1560px; }
+@keyframes jr-rise { from { opacity: 0; transform: translateY(40px); } }
+@keyframes jr-blur { from { opacity: 0; filter: blur(18px); transform: translateY(24px); } }
+@keyframes jr-grow { from { opacity: 0; transform: translateY(160px); } }
+@keyframes jr-fade { from { opacity: 0; } }
+.jr-deck .slide.on .a { animation: jr-rise .8s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i, 0) * 140ms); }
+.jr-deck .slide.on .b { animation: jr-blur 1.1s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i, 0) * 160ms); }
+.jr-deck .slide.on .g { animation: jr-grow .9s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i, 0) * 180ms); }
+.jr-deck .slide.on .f { animation: jr-fade 1.6s ease-out both; animation-delay: calc(var(--i, 0) * 140ms); }
+@media (prefers-reduced-motion: reduce) { .jr-deck .slide, .jr-deck .slide.on { transition: none; } .jr-deck .slide.on .a, .jr-deck .slide.on .b, .jr-deck .slide.on .g, .jr-deck .slide.on .f { animation: none; } }
+
+/* ===== Player ===== */
+.jr-player { position: fixed; inset: 0; z-index: 1000; background: #0A0908; color: #F5F2EC; font-family: "DM Sans", Arial, sans-serif; overflow: hidden; -webkit-user-select: none; user-select: none; }
+.jr-player.idle { cursor: none; }
+.jr-player .jr-stage { position: absolute; inset: 0; }
+.jr-player .jr-deck { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.jr-player .jr-progress { position: absolute; left: 0; top: 0; height: 3px; background: #E2A85B; width: 0; transition: width .5s ease, opacity .4s; z-index: 5; }
+.jr-player.idle .jr-progress { opacity: .55; }
+.jr-player .jr-zb, .jr-player .jr-zn { position: absolute; top: 0; bottom: 0; z-index: 2; }
+.jr-player .jr-zb { left: 0; width: 25%; } .jr-player .jr-zn { right: 0; width: 75%; }
+.jr-player .jr-bar { position: absolute; z-index: 10; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); display: flex; align-items: center; gap: 4px; padding: 6px; background: rgba(18,17,16,.8); border: 1px solid rgba(245,242,236,.16); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); transition: opacity .35s ease, transform .35s ease; flex-wrap: wrap; max-width: calc(100% - 32px); }
+.jr-player.idle .jr-bar { opacity: 0; transform: translateY(12px); pointer-events: none; }
+.jr-player .jr-bar button { appearance: none; border: 0; background: transparent; color: #F5F2EC; width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; border-radius: 0; }
+.jr-player .jr-bar button:hover { background: rgba(245,242,236,.1); }
+.jr-player .jr-bar button:focus-visible { outline: 2px solid #E2A85B; outline-offset: -2px; }
+.jr-player .jr-bar button[aria-pressed="true"] { color: #E2A85B; }
+.jr-player .jr-bar svg { width: 22px; height: 22px; }
+.jr-player .sep { width: 1px; height: 28px; background: rgba(245,242,236,.16); margin: 0 4px; }
+.jr-player .jr-count { font-family: "Oswald", Arial, sans-serif; font-size: 16px; letter-spacing: 2px; min-width: 64px; text-align: center; font-variant-numeric: tabular-nums; }
+.jr-player .jr-timer { font-family: "Oswald", Arial, sans-serif; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; padding: 0 10px; height: 44px; display: flex; align-items: center; gap: 8px; color: #B8B0A4; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.jr-player .jr-timer b { color: #F5F2EC; font-weight: 500; }
+.jr-player .pace { padding: 3px 8px; border: 1px solid currentColor; }
+.jr-player .pace.late { color: #E2A85B; } .jr-player .pace.early { color: #9FC2E8; } .jr-player .pace.ok { color: #B8B0A4; }
+.jr-player .jr-notes { position: absolute; z-index: 9; left: max(16px, env(safe-area-inset-left, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: min(560px, calc(100% - 32px)); max-height: 46vh; overflow: auto; padding: 18px 20px; background: rgba(18,17,16,.92); border: 1px solid rgba(245,242,236,.16); font-size: 17px; line-height: 1.5; }
+.jr-player .jr-notes .meta { font-family: "Oswald", Arial, sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #E2A85B; margin-bottom: 8px; display: flex; justify-content: space-between; gap: 12px; }
+.jr-player .jr-notes .nx { margin-top: 12px; font-size: 14px; color: #B8B0A4; }
+.jr-player .jr-blank { position: absolute; inset: 0; background: #000; z-index: 20; opacity: 0; pointer-events: none; transition: opacity .4s; }
+.jr-player .jr-blank.on { opacity: 1; pointer-events: auto; }
+.jr-player [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<!-- Motor de la versión en vivo. No editar: solo se cambia el bloque DATOS de abajo. -->
+<script>
+(function () {
+  var E = {};
+  var PART = {
+    dark: { n: 110, d: 170, line: '226,168,91', la: .35, dot: 'rgba(245,242,236,.75)', v: .45 },
+    soft: { n: 70, d: 150, line: '226,168,91', la: .22, dot: 'rgba(245,242,236,.45)', v: .3 },
+    light: { n: 110, d: 170, line: '143,84,20', la: .3, dot: 'rgba(22,21,19,.5)', v: .45 },
+    lightsoft: { n: 70, d: 150, line: '143,84,20', la: .2, dot: 'rgba(22,21,19,.35)', v: .3 }
+  };
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null && text !== '') e.textContent = String(text); return e; }
+  function str(v, max) { v = v == null ? '' : String(v).trim(); return max && v.length > max ? v.slice(0, max - 1).trim() + '…' : v; }
+  function anim(e, kind, i) { e.classList.add(kind); e.style.setProperty('--i', i); return e; }
+  function pick(len, steps) { for (var k = 0; k < steps.length; k++) if (len <= steps[k][0]) return steps[k][1]; return steps[steps.length - 1][1]; }
+  function longestWord(s) { return String(s).split(/\s+/).reduce(function (m, w) { return Math.max(m, w.length); }, 0); }
+  function displaySize(text, base) {
+    var t = String(text), len = t.length, w = longestWord(t);
+    var size = pick(len, base);
+    var maxByWord = Math.floor(1664 / (w * 0.98 + 0.1));
+    return Math.max(44, Math.min(size, maxByWord));
+  }
+  function tone(style, i, layout) {
+    if (style === 'oscuro') return 'dark';
+    if (style === 'claro') return 'light';
+    return i % 2 === 0 ? 'dark' : 'light';
+  }
+  function head(sec, s, startI) {
+    var h = el('div', 'head');
+    if (s.eyebrow) h.appendChild(anim(el('p', 'eyebrow', str(s.eyebrow, 40)), 'a', startI));
+    if (s.title) { var t = el('h2', 'display', str(s.title, 60)); t.style.fontSize = displaySize(t.textContent, [[14, 88], [22, 72], [32, 58], [999, 48]]) + 'px'; h.appendChild(anim(t, 'a', startI + 1)); }
+    if (s.text) { var p = el('p', 'soft', str(s.text, 160)); p.style.fontSize = '32px'; p.style.maxWidth = '1400px'; h.appendChild(anim(p, 'a', startI + 2)); }
+    sec.appendChild(h);
+  }
+  function foot(sec, data, i) {
+    var f = el('div', 'foot'); f.appendChild(el('p', '', data.speaker || '')); f.appendChild(el('p', '', String(i + 1))); sec.appendChild(f);
+  }
+  function items(s, min, max) { var a = Array.isArray(s.items) ? s.items.filter(function (x) { return x && (x.title || x.text); }) : []; return a.slice(0, max); }
+  function numParts(v) {
+    var m = /^\s*([0-9]+(?:[.,][0-9]+)?)\s*$/.exec(String(v == null ? '' : v));
+    if (!m) return null;
+    var raw = m[1], dec = raw.indexOf(',') >= 0 ? ',' : '.', n = parseFloat(raw.replace(',', '.'));
+    var places = raw.indexOf(dec) >= 0 ? raw.split(dec)[1].length : 0;
+    return { n: n, places: places, dec: dec };
+  }
+  function fmtNum(x, p) {
+    var s = x.toFixed(p.places);
+    var parts = s.split('.'), int = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, p.dec === ',' ? '.' : ' ');
+    return parts.length > 1 ? int + p.dec + parts[1] : int;
+  }
+
+  var B = {};
+  B.cover = function (sec, s, data, closing) {
+    sec.classList.add('cover');
+    sec.appendChild(el('canvas', 'particles')).dataset.p = sec.classList.contains('dark') ? 'dark' : 'light';
+    if (s.eyebrow) sec.appendChild(anim(el('p', 'eyebrow', str(s.eyebrow, 40)), 'b', 0));
+    var h = el('h1', 'display', str(s.title || data.title, 60)); h.style.fontSize = displaySize(h.textContent, [[16, 112], [28, 96], [40, 76], [999, 60]]) + 'px'; h.style.marginTop = '40px'; h.style.maxWidth = '1664px';
+    sec.appendChild(anim(h, 'b', 1));
+    if (s.subtitle) { var p = el('p', 'lead soft', str(s.subtitle, 120)); p.style.marginTop = '40px'; p.style.fontWeight = '400'; p.style.maxWidth = '1400px'; sec.appendChild(anim(p, 'b', 3)); }
+    if (s.tag) { var t = el('p', 'tag', str(s.tag, 60)); t.style.marginTop = '56px'; sec.appendChild(anim(t, 'b', 5)); }
+    if (data.speaker) { var g = el('p', 'signature', data.speaker); g.style.marginTop = '48px'; sec.appendChild(anim(g, 'b', 6)); }
+  };
+  B.closing = function (sec, s, data) { B.cover(sec, s, data, true); };
+  B.statement = function (sec, s, data, i) {
+    var t = Object.assign({}, s, { text: '' }); head(sec, t, 0);
+    if (s.text) { var p = el('p', 'statement', str(s.text, 140)); sec.appendChild(anim(p, 'a', 3)); }
+  };
+  B.cards = function (sec, s, data, i) {
+    head(sec, { eyebrow: s.eyebrow, title: s.title }, 0);
+    var list = items(s, 2, 4), row = el('div', 'cols');
+    list.forEach(function (it, k) {
+      var c = anim(el('div', 'col'), 'a', 3 + k);
+      c.appendChild(el('p', 'num', (k < 9 ? '0' : '') + (k + 1)));
+      if (it.title) { var h = el('h3', '', str(it.title, 40)); h.style.fontSize = (list.length > 3 ? 38 : 44) + 'px'; c.appendChild(h); }
+      if (it.text) c.appendChild(el('p', 't soft', str(it.text, 100)));
+      row.appendChild(c);
+    });
+    sec.appendChild(row);
+  };
+  B.steps = function (sec, s, data, i) {
+    head(sec, { eyebrow: s.eyebrow, title: s.title }, 0);
+    var list = items(s, 3, 4), row = el('div', 'stairs'), k = list.length;
+    var lo = k > 3 ? 300 : 340, hi = 600, stepH = k > 1 ? (hi - lo) / (k - 1) : 0;
+    list.forEach(function (it, j) {
+      var c = anim(el('div', 'stp' + (j === k - 1 ? ' top' : '')), 'g', 2 + j);
+      c.style.height = Math.round(lo + stepH * j) + 'px';
+      c.appendChild(el('p', 'num', (j < 9 ? '0' : '') + (j + 1)));
+      if (it.title) c.appendChild(el('h3', '', str(it.title, 30)));
+      if (it.text) c.appendChild(el('p', 't', str(it.text, 80)));
+      row.appendChild(c);
+    });
+    sec.appendChild(row);
+  };
+  B.flow = function (sec, s, data, i) {
+    head(sec, s, 0);
+    var list = items(s, 3, 5), k = Math.max(1, list.length), gap = 96, w = Math.floor((1664 - gap * (k - 1)) / k);
+    var box = el('div', 'flow');
+    var dark = sec.classList.contains('dark'), col = dark ? '#E2A85B' : '#8F5414';
+    var NS = 'http://www.w3.org/2000/svg', svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('width', '1664'); svg.setAttribute('height', '260'); svg.setAttribute('viewBox', '0 0 1664 260'); svg.setAttribute('aria-hidden', 'true');
+    svg.style.left = '0'; svg.style.top = '0'; anim(svg, 'f', 3);
+    for (var j = 0; j < k - 1; j++) {
+      var x = (j + 1) * w + j * gap;
+      var ln = document.createElementNS(NS, 'path'); ln.setAttribute('d', 'M' + x + ' 130 L' + (x + gap) + ' 130');
+      ln.setAttribute('stroke', col); ln.setAttribute('stroke-width', '2'); ln.setAttribute('stroke-dasharray', '6 8'); ln.setAttribute('stroke-opacity', '.6'); svg.appendChild(ln);
+      var c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', x); c.setAttribute('cy', '130'); c.setAttribute('r', '7'); c.setAttribute('fill', col);
+      if (!reduce) { var m = document.createElementNS(NS, 'animateMotion'); m.setAttribute('dur', '1.4s'); m.setAttribute('begin', (1 + j * 0.3) + 's'); m.setAttribute('repeatCount', 'indefinite'); m.setAttribute('path', 'M0 0 L' + gap + ' 0'); c.appendChild(m); }
+      svg.appendChild(c);
+    }
+    box.appendChild(svg);
+    list.forEach(function (it, j) {
+      var nd = anim(el('div', 'node' + (j === k - 1 ? ' end' : '')), 'a', 3 + j);
+      nd.style.left = (j * (w + gap)) + 'px'; nd.style.width = w + 'px';
+      nd.appendChild(el('p', 'k', 'Paso ' + (j + 1)));
+      var p = el('p', '', str(it.title || it.text, 40)); p.style.fontSize = (w < 300 ? 28 : 34) + 'px'; nd.appendChild(p);
+      box.appendChild(nd);
+    });
+    sec.appendChild(box);
+  };
+  B.number = function (sec, s, data, i) {
+    sec.classList.add('center');
+    sec.appendChild(el('canvas', 'particles')).dataset.p = sec.classList.contains('dark') ? 'soft' : 'lightsoft';
+    if (s.eyebrow) sec.appendChild(anim(el('p', 'eyebrow', str(s.eyebrow, 40)), 'a', 0));
+    var parts = numParts(s.value), suf = str(s.suffix, 6);
+    var n = el('p', 'n big', (s.value == null ? '' : String(s.value)) + suf);
+    var len = n.textContent.length; n.style.fontSize = (len <= 4 ? 220 : len <= 6 ? 180 : len <= 9 ? 140 : 100) + 'px'; n.style.marginTop = '24px';
+    if (parts) { n.dataset.to = parts.n; n.dataset.places = parts.places; n.dataset.dec = parts.dec; n.dataset.suffix = suf; }
+    sec.appendChild(n);
+    if (s.label) { var l = el('p', 'lead', str(s.label, 110)); l.style.marginTop = '24px'; l.style.maxWidth = '1400px'; sec.appendChild(anim(l, 'a', 4)); }
+    if (s.source) sec.appendChild(anim(el('p', 'src soft', 'Fuente: ' + str(s.source, 80)), 'a', 6));
+  };
+  B.quote = function (sec, s, data, i) {
+    sec.classList.add('center');
+    if (s.eyebrow) sec.appendChild(anim(el('p', 'eyebrow', str(s.eyebrow, 40)), 'a', 0));
+    var q = el('p', 'qt', '«' + str(s.text, 160).replace(/^[«"“]|[»"”]$/g, '') + '»'); q.style.marginTop = '32px';
+    if (q.textContent.length > 90) q.style.fontSize = '60px';
+    sec.appendChild(anim(q, 'b', 1));
+    if (s.source) { var a = el('p', 'signature soft', str(s.source, 60)); a.style.marginTop = '40px'; sec.appendChild(anim(a, 'a', 4)); }
+  };
+
+  E.render = function (data) {
+    var slides = (data && Array.isArray(data.slides)) ? data.slides : [];
+    return slides.map(function (s, i) {
+      var layout = B[s.layout] ? s.layout : (s.items ? 'cards' : 'statement');
+      var sec = el('section', 'slide ' + tone(data.style, i, layout));
+      B[layout](sec, s, data, i);
+      if (layout !== 'cover' && layout !== 'closing') foot(sec, data, i);
+      return sec;
+    });
+  };
+
+  function drawField(f, move) {
+    var x = f.x, p = f.pts, cfg = f.cfg, i, j;
+    x.clearRect(0, 0, 1920, 1080);
+    if (move) for (i = 0; i < p.length; i++) { p[i].x += p[i].vx; p[i].y += p[i].vy; if (p[i].x < 0 || p[i].x > 1920) p[i].vx *= -1; if (p[i].y < 0 || p[i].y > 1080) p[i].vy *= -1; }
+    x.lineWidth = 1;
+    for (i = 0; i < p.length; i++) for (j = i + 1; j < p.length; j++) {
+      var dx = p[i].x - p[j].x, dy = p[i].y - p[j].y, d = Math.sqrt(dx * dx + dy * dy);
+      if (d < cfg.d) { x.strokeStyle = 'rgba(' + cfg.line + ',' + ((1 - d / cfg.d) * cfg.la) + ')'; x.beginPath(); x.moveTo(p[i].x, p[i].y); x.lineTo(p[j].x, p[j].y); x.stroke(); }
+    }
+    x.fillStyle = cfg.dot;
+    for (i = 0; i < p.length; i++) { x.beginPath(); x.arc(p[i].x, p[i].y, p[i].r, 0, 7); x.fill(); }
+  }
+  function field(sec) {
+    var c = sec.querySelector('canvas.particles'); if (!c) return null;
+    if (c._f) return c._f;
+    var cfg = PART[c.dataset.p] || PART.dark; c.width = 1920; c.height = 1080;
+    var pts = [];
+    for (var i = 0; i < cfg.n; i++) pts.push({ x: Math.random() * 1920, y: Math.random() * 1080, vx: (Math.random() - .5) * cfg.v * 2, vy: (Math.random() - .5) * cfg.v * 2, r: Math.random() * 2.2 + .6 });
+    c._f = { x: c.getContext('2d'), cfg: cfg, pts: pts };
+    return c._f;
+  }
+  E.paintStatic = function (sec) { var f = field(sec); if (f) drawField(f, false); };
+
+  function countUp(sec, isOn) {
+    sec.querySelectorAll('[data-to]').forEach(function (n) {
+      var to = +n.dataset.to, p = { places: +n.dataset.places || 0, dec: n.dataset.dec || '.' }, suf = n.dataset.suffix || '';
+      var final = fmtNum(to, p) + suf;
+      if (reduce) { n.textContent = final; return; }
+      var t0 = null; n.textContent = fmtNum(0, p) + suf;
+      function step(t) {
+        if (!isOn()) { n.textContent = final; return; }
+        if (t0 === null) t0 = t;
+        var k = Math.min(1, Math.max(0, (t - t0 - 300) / 1800));
+        n.textContent = fmtNum(to * (1 - Math.pow(1 - k, 3)), p) + suf;
+        if (k < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  /* A stage shows one slide at a time with entrance motion */
+  function Stage(deckEl, sections) { this.d = deckEl; this.s = sections; this.cur = -1; this.raf = 0; this.alive = true; var self = this; sections.forEach(function (s) { deckEl.appendChild(s); }); }
+  Stage.prototype.show = function (i) {
+    var self = this, s;
+    i = Math.max(0, Math.min(this.s.length - 1, i));
+    if (this.cur >= 0 && this.s[this.cur]) this.s[this.cur].classList.remove('on');
+    this.cur = i; s = this.s[i]; if (!s) return;
+    void s.offsetWidth; s.classList.add('on');
+    cancelAnimationFrame(this.raf);
+    var f = field(s);
+    if (f) { var loop = function () { if (!self.alive) return; drawField(f, !reduce); if (!reduce) self.raf = requestAnimationFrame(loop); }; loop(); }
+    countUp(s, function () { return self.alive && self.s[self.cur] === s; });
+    s.querySelectorAll('svg').forEach(function (v) { try { v.setCurrentTime && v.setCurrentTime(0); } catch (e) {} });
+  };
+  Stage.prototype.destroy = function () { this.alive = false; cancelAnimationFrame(this.raf); };
+  E.Stage = Stage;
+
+  function short(sec) { sec = Math.max(0, Math.round(sec)); var m = Math.floor(sec / 60), s = sec % 60; return m + ':' + (s < 10 ? '0' : '') + s; }
+  function mmss(sec) { sec = Math.max(0, Math.round(sec)); var m = Math.floor(sec / 60), s = sec % 60; return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s; }
+  var ICON = {
+    prev: '<path d="m15 18-6-6 6-6"/>', next: '<path d="m9 18 6-6-6-6"/>',
+    timer: '<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/>',
+    notes: '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/>',
+    blank: '<rect x="3" y="4" width="18" height="13"/><path d="M8 21h8M12 17v4M3 4l18 13"/>',
+    full: '<path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/>',
+    exit: '<path d="M18 6 6 18M6 6l12 12"/>'
+  };
+  function btn(name, label) {
+    var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', label); b.title = label;
+    b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICON[name] + '</svg>';
+    return b;
+  }
+
+  /* Full-screen presenter with discreet controls */
+  E.present = function (host, data, opts) {
+    opts = opts || {};
+    var root = el('div', 'jr-player'); root.setAttribute('role', 'region'); root.setAttribute('aria-label', 'Presentación');
+    var stageEl = el('div', 'jr-stage'), deck = el('div', 'jr-deck'); stageEl.appendChild(deck); root.appendChild(stageEl);
+    var sections = E.render(data), N = sections.length, st = new Stage(deck, sections);
+    var prog = el('div', 'jr-progress'), zb = el('div', 'jr-zb'), zn = el('div', 'jr-zn');
+    root.appendChild(prog); root.appendChild(zb); root.appendChild(zn);
+    var notes = el('div', 'jr-notes'); notes.hidden = true;
+    var nm = el('div', 'meta'), nmL = el('span'), nmR = el('span'); nm.appendChild(nmL); nm.appendChild(nmR);
+    var nt = el('div'), nx = el('div', 'nx'); notes.appendChild(nm); notes.appendChild(nt); notes.appendChild(nx); root.appendChild(notes);
+    var bar = el('nav', 'jr-bar'); bar.setAttribute('aria-label', 'Controles de la presentación');
+    var bPrev = btn('prev', 'Anterior'), count = el('span', 'jr-count'), bNext = btn('next', 'Siguiente');
+    var timerBox = el('div', 'jr-timer'), tb = el('b', '', '00:00'), tot = el('span', '', '/ ' + mmss((+data.duration || 10) * 60)), pace = el('span', 'pace ok', 'Listo');
+    timerBox.appendChild(tb); timerBox.appendChild(tot); timerBox.appendChild(pace);
+    var bTimer = btn('timer', 'Iniciar o pausar el cronómetro (P)'), bNotes = btn('notes', 'Notas del orador (N)'), bBlank = btn('blank', 'Pantalla en negro (B)'), bFull = btn('full', 'Pantalla completa (F)');
+    [bPrev, count, bNext, el('span', 'sep'), timerBox, bTimer, el('span', 'sep'), bNotes, bBlank, bFull].forEach(function (x) { bar.appendChild(x); });
+    var bExit = null; if (opts.onExit) { bExit = btn('exit', 'Salir (Esc)'); bar.appendChild(bExit); }
+    root.appendChild(bar);
+    var blank = el('div', 'jr-blank'); root.appendChild(blank);
+    host.appendChild(root);
+
+    function fit() { var w = root.clientWidth, h = root.clientHeight, k = Math.min(w / 1920, h / 1080); deck.style.transform = 'translate(' + ((w - 1920 * k) / 2) + 'px,' + ((h - 1080 * k) / 2) + 'px) scale(' + k + ')'; }
+    fit(); window.addEventListener('resize', fit);
+
+    var total = (+data.duration || 10) * 60, weights = sections.map(function (s, i) { return (i === 0 || i === N - 1) ? .6 : 1; });
+    var wsum = weights.reduce(function (a, b) { return a + b; }, 0), acc = 0, plan = weights.map(function (w) { acc += w / wsum * total; return acc; });
+    var cur = 0, timer = { started: false, running: false, acc: 0, t0: 0 };
+    function elapsed() { return timer.acc + (timer.running ? (Date.now() - timer.t0) / 1000 : 0); }
+    function startT() { timer.started = true; timer.running = true; timer.t0 = Date.now(); bTimer.setAttribute('aria-pressed', 'true'); }
+    function toggleT() { if (!timer.running) startT(); else { timer.acc = elapsed(); timer.running = false; bTimer.setAttribute('aria-pressed', 'false'); } upd(); }
+    function resetT() { timer = { started: false, running: false, acc: 0, t0: 0 }; bTimer.setAttribute('aria-pressed', 'false'); upd(); }
+    function upd() {
+      var e = elapsed(); tb.textContent = mmss(e);
+      if (!timer.started) { pace.textContent = 'Listo'; pace.className = 'pace ok'; return; }
+      var a = cur === 0 ? 0 : plan[cur - 1], b = plan[cur];
+      if (e > b) { pace.textContent = '+' + short(e - b) + ' tarde'; pace.className = 'pace late'; }
+      else if (e < a) { pace.textContent = '−' + short(a - e) + ' antes'; pace.className = 'pace early'; }
+      else { pace.textContent = timer.running ? 'A tiempo' : 'En pausa'; pace.className = 'pace ok'; }
+    }
+    var iv = setInterval(upd, 500);
+    function go(i) {
+      i = Math.max(0, Math.min(N - 1, i)); cur = i; st.show(i);
+      count.textContent = (i + 1) + ' / ' + N; prog.style.width = ((i + 1) / N * 100) + '%';
+      var s = data.slides[i] || {};
+      nmL.textContent = (i + 1) + ' · ' + (s.title || s.eyebrow || ''); nmR.textContent = short(i === 0 ? 0 : plan[i - 1]) + '–' + short(plan[i]);
+      nt.textContent = s.notes || 'Sin notas para esta diapositiva.';
+      nx.textContent = i < N - 1 ? 'Siguiente: ' + ((data.slides[i + 1] || {}).title || '') : 'Última diapositiva';
+      if (!timer.started && i > 0) startT();
+      upd();
+    }
+    function isBlank() { return blank.classList.contains('on'); }
+    function next() { if (isBlank()) return blank.classList.remove('on'); go(cur + 1); }
+    function prev() { if (isBlank()) return blank.classList.remove('on'); go(cur - 1); }
+    function toggleNotes() { notes.hidden = !notes.hidden; bNotes.setAttribute('aria-pressed', String(!notes.hidden)); }
+    function full() {
+      var d = document;
+      try {
+        if (d.fullscreenElement || d.webkitFullscreenElement) { (d.exitFullscreen || d.webkitExitFullscreen).call(d); }
+        else { var r = root.requestFullscreen || root.webkitRequestFullscreen; if (r) { var pr = r.call(root); if (pr && pr.catch) pr.catch(function () {}); } }
+      } catch (e) {}
+    }
+    var idleT = 0;
+    function wake() { root.classList.remove('idle'); clearTimeout(idleT); idleT = setTimeout(function () { root.classList.add('idle'); }, 2500); }
+    root.addEventListener('mousemove', wake); root.addEventListener('pointerdown', wake);
+    bPrev.onclick = function (e) { e.stopPropagation(); prev(); };
+    bNext.onclick = function (e) { e.stopPropagation(); next(); };
+    bTimer.onclick = toggleT; bNotes.onclick = toggleNotes; bBlank.onclick = function () { blank.classList.add('on'); }; bFull.onclick = full;
+    if (bExit) bExit.onclick = function () { destroy(); };
+    zn.onclick = next; zb.onclick = prev; blank.onclick = function () { blank.classList.remove('on'); };
+    var tx = null;
+    root.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', function (e) { if (tx === null) return; var dx = e.changedTouches[0].clientX - tx; tx = null; if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); } }, { passive: true });
+    function key(e) {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      var k = e.key;
+      if (isBlank()) { e.preventDefault(); blank.classList.remove('on'); return; }
+      if (k === 'ArrowRight' || k === 'ArrowDown' || k === ' ' || k === 'PageDown' || k === 'Enter') { e.preventDefault(); next(); }
+      else if (k === 'ArrowLeft' || k === 'ArrowUp' || k === 'PageUp' || k === 'Backspace') { e.preventDefault(); prev(); }
+      else if (k === 'Home') { e.preventDefault(); go(0); }
+      else if (k === 'End') { e.preventDefault(); go(N - 1); }
+      else if (/^[1-9]$/.test(k) && +k <= N) go(+k - 1);
+      else if (k === 'b' || k === 'B' || k === '.') blank.classList.add('on');
+      else if (k === 'n' || k === 'N') toggleNotes();
+      else if (k === 'f' || k === 'F') full();
+      else if (k === 'p' || k === 'P') toggleT();
+      else if (k === 't' || k === 'T') resetT();
+      else if (k === 'Escape' && opts.onExit && !(document.fullscreenElement || document.webkitFullscreenElement)) destroy();
+    }
+    document.addEventListener('keydown', key);
+    function destroy() {
+      st.destroy(); clearInterval(iv); clearTimeout(idleT); document.removeEventListener('keydown', key); window.removeEventListener('resize', fit);
+      try { if (document.fullscreenElement) document.exitFullscreen(); } catch (e) {}
+      root.remove(); if (opts.onExit) opts.onExit();
+    }
+    go(opts.start || 0); wake();
+    if (opts.fullscreen) full();
+    bNext.focus();
+    return { destroy: destroy };
+  };
+  window.DeckEngine = E;
+})();
+</script>
+<script>
+/* DATOS: reemplazar este objeto completo. Esquema en SKILL.md, sección «Versión en vivo». */
+var DATOS = {"title": "Plan MYPE 2026–2031", "speaker": "Juan Ramiro Alvarado Gómez", "duration": 10, "style": "alterna", "slides": [{"layout": "cover", "eyebrow": "Plan MYPE 2026–2031", "title": "Formalizarse no puede ser castigo", "subtitle": "Rescate y transformación estructural de la MYPE en el Perú.", "tag": "Reglas, no subsidios", "notes": "Vengo a proponer un cambio de reglas, no un nuevo subsidio. En diez minutos verán por qué la MYPE no crece, cuánto le cuesta al país y qué cuatro decisiones podemos tomar en quince días."}, {"layout": "number", "eyebrow": "Son el 99,3 % de las empresas", "value": "4,3", "suffix": " %", "label": "es lo que rinde una microempresa frente a la gran empresa.", "source": "Resumen ejecutivo del Plan MYPE 2026–2031, sección 1", "notes": "En el papel, la MYPE sostiene al Perú: es el 99,3 % de las empresas formales y da cerca del 90 % del empleo privado. Pero eso es cantidad, no fuerza: su productividad es apenas el 4,3 % de la gran empresa."}, {"layout": "cards", "eyebrow": "El diagnóstico", "title": "Las reglas castigan", "items": [{"title": "Crecer se paga", "text": "Pasar de 20 trabajadores o de un tope de ventas hunde la rentabilidad."}, {"title": "Exhibirse expone", "text": "La fachada con RUC y titular es un catálogo para el extorsionador."}, {"title": "El Estado paga tarde", "text": "De 90 a 120 días para pagar a sus proveedores."}, {"title": "El fisco cobra antes", "text": "Las detracciones inmovilizan hasta el 12 % del precio de venta."}], "notes": "El diagnóstico identifica seis restricciones; estas cuatro son las que más pesan. Pierde el que crece y gana el que se esconde en la informalidad."}, {"layout": "number", "eyebrow": "El impuesto criminal", "value": "54", "suffix": " %", "label": "de la utilidad de una bodega se la lleva la extorsión: S/ 780 al mes de S/ 1 440.", "source": "Resumen ejecutivo del Plan MYPE 2026–2031, sección 3", "notes": "La extorsión funciona como un tributo ilegal. Una bodega entrega 30 soles diarios. El microempresario no quiebra por falta de clientes; quiebra porque la extorsión cobra primero."}, {"layout": "cards", "eyebrow": "La solución · 4 de 7 medidas", "title": "Reglas, no subsidios", "items": [{"title": "Tasas de 0, 5 y 10 %", "text": "Grava solo lo que excede el estrato anterior."}, {"title": "Domicilio virtual y QR", "text": "La fachada deja de mostrar datos; solo el fiscalizador los ve."}, {"title": "Congelar en 2 horas", "text": "La UIF bloquea las cuentas que reciben la extorsión."}, {"title": "Pago dividido del IGV", "text": "Sustituye el SPOT: sin capital retenido."}], "notes": "La respuesta habitual es más gasto asistencial. Este plan cambia las reglas. Las otras tres medidas son la factura conformada con factoring, la ruta CITE y el panel nacional de trayectorias empresariales."}, {"layout": "number", "eyebrow": "Meta de diseño", "value": "24", "suffix": " h", "label": "o menos para cobrar una factura MYPE. Hoy son 72 días.", "source": "Resumen ejecutivo, sección 5 · Verificación: CAVALI - SBS", "notes": "Es la meta más tangible. También buscamos llevar el empleo en planilla del 13,5 % al 35 % y bajar la informalidad laboral del 75 % al 45 % en 36 meses."}, {"layout": "steps", "eyebrow": "Mesa interministerial en 15 días", "title": "Cuatro directrices", "items": [{"title": "Matriz marginal", "text": "Diseño preliminar y sustento técnico."}, {"title": "Privacidad registral", "text": "Reglamento de domicilio virtual y QR."}, {"title": "Bloqueo UIF", "text": "Congelamiento en menos de 2 horas."}, {"title": "Piloto SUNAT-BCRP", "text": "IGV en el punto de pago."}], "notes": "Propongo convocar en 15 días una mesa con PCM, MEF, PRODUCE y MININTER para dictar estas cuatro directrices. El marco legal ya existe en la Ley 32069."}, {"layout": "closing", "eyebrow": "Para decidir", "title": "Las leyes están, falta decidir", "subtitle": "Cada mes de espera tiene un costo.", "tag": "Plan MYPE 2026–2031", "notes": "A la MYPE no le falta capacitación; le sobran obstáculos. Son reformas de alto impacto y bajo costo fiscal directo. Las condiciones están dadas: ahora toca ejecutar."}]};
+DeckEngine.present(document.body, DATOS, {});
+</script>
+</body>
+</html>
