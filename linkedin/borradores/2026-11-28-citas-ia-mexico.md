@@ -1,6 +1,6 @@
 # Borrador: lo que México aprendió de China y lo que el Perú podría adaptar (pilar: reforma de trámites y gestión pública)
 
-Estado: borrador para revisión (versión 3: gancho cambiado tras verificar la telemamografía). NO publicado.
+Estado: borrador para revisión (versión 4: añade el enlace a la conferencia). NO publicado.
 Cuenta: perfil personal (por confirmar). Formato: texto. Sin emojis ni hashtags.
 Relación: mismo tema que `2026-11-05-seguro-social.md`; publicar solo uno o dejar una semana entre ellos.
 
@@ -13,7 +13,7 @@ Relación: mismo tema que `2026-11-05-seguro-social.md`; publicar solo uno o dej
 
 En el primer semestre de 2026, más de 7 600 mujeres en el Perú accedieron a un diagnóstico de cáncer de mama rápido y gratuito, con mamografías leídas a distancia. El Perú ya dio ese primer paso.
 
-Volví a pensar en ello al revisar una conferencia reciente del gobierno de México. Sus autoridades visitaron hospitales en Shenzhen, China, y regresaron con dos acuerdos: instalar un primer hospital inteligente y enviar médicos a formarse allá.
+Volví a pensar en ello al revisar la conferencia de prensa del gobierno de México del 24 de noviembre (dejo el enlace en el primer comentario para quien quiera escucharla). Sus autoridades visitaron hospitales en Shenzhen, China, y regresaron con dos acuerdos: instalar un primer hospital inteligente y enviar médicos a formarse allá.
 
 Vale la pena explicar lo que vieron, porque es más sencillo de lo que suena.
 
@@ -36,6 +36,7 @@ Lo comprobé al rediseñar el proceso del pasaporte. Cuando un servicio se mide 
 ## Primer comentario (fuentes)
 
 Para quien quiera profundizar:
+Conferencia del gobierno de México, 24/11/2026 (versión oficial): https://www.gob.mx/presidencia/articulos/version-estenografica-conferencia-de-prensa-de-la-presidenta-claudia-sheinbaum-pardo-del-24-de-noviembre-de-2026
 Minsa, telemamografía en el primer semestre de 2026: https://www.gob.pe/institucion/minsa/noticias/1424217-primer-semestre-2026-ministerio-de-salud-permitio-que-7600-mujeres-del-pais-accedan-a-diagnosticos-de-cancer-de-mama-rapidos-y-gratuitos
 INEN, teleconsultas y telemamografía: https://www.gob.pe/institucion/inen/noticias/1423727-mas-de-270-mil-teleconsultas-consolidan-al-inen-como-referente-en-la-atencion-oncologica-especializada-en-las-regiones-del-pais
 EsSalud, atenciones pendientes (29/09/2026): https://www.gob.pe/institucion/essalud/noticias/1450779-essalud-amplia-horarios-de-atencion-y-activa-hospital-peru-para-reducir-listas-de-espera
@@ -55,6 +56,7 @@ Lineamientos del Minsa para el uso de la IA: https://elperuano.pe/noticia/306287
   - Confirmado: el INEN lee mamografías a distancia por la plataforma Teleatiendo desde 2025 (más de 3 000 lecturas) y siguió recibiendo imágenes en 2026 (nota de Áncash del 25/11/2026: Hospital de Pomabamba; 18 radiólogos regionales capacitados).
   - No confirmado: que Huancayo y Magdalena sigan enviando imágenes (solo aparecen en un proyecto de 2023 a marzo de 2025); por eso se quitó Huancayo del gancho.
   - No confirmado: el uso de inteligencia artificial en la telemamografía peruana. Lo mencionan resúmenes de buscador sobre notas del Minsa y del INEN, pero no se pudo leer el texto. El post no afirma que el Perú use IA en mamografías.
+- Enlace de la conferencia: página oficial de la versión estenográfica en gob.mx (24/11/2026), hallada por buscador; no se pudo abrir desde esta sesión. Varios medios (Expansión, El Universal, UnoTV) sitúan ese día el anuncio del hospital inteligente. No se encontró el enlace directo al video de YouTube; si se consigue, puede sumarse indicando que el tema de salud empieza cerca del minuto 50.
 - Acuerdos de México con China (hospital inteligente y formación de médicos): transcripción, 51:44 a 52:52.
 - Lectura de imágenes con IA y confirmación por el médico: transcripción, 1:00:35 a 1:01:55.
 - Aplicación con citas y orientación de síntomas: transcripción, 1:09:07 a 1:09:51.
