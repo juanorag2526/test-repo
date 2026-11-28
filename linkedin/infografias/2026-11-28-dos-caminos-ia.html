@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dos caminos al médico</title>
+<!-- Estilo 1 · boceto a mano: para explicar conceptos (procesos, ciclos, viajes, embudos, escaleras, antes/después). -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&display=swap">
+<style>
+  :root {
+    --papel: #fdfdfb;
+    --tinta: #1a1a1a;
+    --firma: "Juan Ramiro Alvarado Gómez";
+    --acento: #F26B1D;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #d6d3d1; }
+  .img { width: 1080px; height: 1350px; margin: 40px auto; background: var(--papel); position: relative; box-shadow: 0 10px 40px rgba(0,0,0,.25); }
+  .img svg { width: 100%; height: 100%; display: block; }
+  .img::after { content: var(--firma); position: absolute; left: 0; right: 0; bottom: 22px; text-align: center; font: 28px "Patrick Hand", cursive; color: #6b6b6b; }
+
+  /* Trazo de rotulador */
+  .t { fill: none; stroke: var(--tinta); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+  .t.fino { stroke-width: 3.5; }
+  .t.punteado { stroke-width: 3.5; stroke-dasharray: 2 12; }
+  .papel { fill: var(--papel); }
+  .relleno { fill: var(--tinta); stroke: none; }
+  .titulo { font: 88px "Gochi Hand", cursive; fill: var(--tinta); }
+  .nombre { font: 50px "Gochi Hand", cursive; fill: var(--tinta); }
+  .nota { font: 34px "Patrick Hand", cursive; fill: #3a3a3a; }
+  .mini { font: 28px "Patrick Hand", cursive; fill: #3a3a3a; }
+  .pantalla { font: 46px "Gochi Hand", cursive; fill: var(--tinta); }
+
+  .acento { stroke: var(--acento); }
+  .txt-acento { fill: var(--acento); }
+  .fuente { font: 24px "Patrick Hand", cursive; fill: #6b6b6b; }
+  .grande { font: 62px "Gochi Hand", cursive; }
+  @media screen { .img { zoom: .45; } }
+  @page { size: 1080px 1350px; margin: 0; }
+  @media print { body { background: none; } .img { margin: 0; box-shadow: none; zoom: 1; } }
+</style>
+</head>
+<body>
+
+<section class="img">
+<svg viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Hace que las líneas tiemblen un poco, como dibujadas a mano. -->
+    <filter id="trazo" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="3.5"/>
+    </filter>
+    <marker id="punta" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+      <path d="M2,2 L17,10 L2,18" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+
+    <!-- Monigote: el origen es el centro de la cabeza. Mide ~200 de alto. -->
+    <g id="monigote">
+      <circle class="t" cx="0" cy="0" r="30"/>
+      <circle class="relleno" cx="-10" cy="-6" r="3.5"/><circle class="relleno" cx="10" cy="-6" r="3.5"/>
+      <path class="t fino" d="M-13,7 Q0,19 13,7"/>
+      <path class="t" d="M0,30 L1,120"/>
+      <path class="t" d="M-50,48 L0,64 L50,46"/>
+      <path class="t" d="M-36,198 L1,120 L38,198"/>
+    </g>
+    <g id="bombilla">
+      <path class="t" d="M-26,8 C-48,-24 -28,-62 0,-62 C28,-62 48,-24 26,8 L22,24 L-22,24 Z"/>
+      <path class="t fino" d="M-18,36 L18,36 M-14,48 L14,48"/>
+      <path class="t fino" d="M0,-80 L0,-98 M-48,-58 L-62,-70 M48,-58 L62,-70 M-62,-20 L-82,-20 M62,-20 L82,-20"/>
+    </g>
+    <g id="hoja">
+      <path class="t" d="M0,0 L96,-6 L102,118 L4,122 Z"/>
+      <path class="t fino" d="M18,24 L82,22 M18,48 L84,46 M18,72 L80,71 M18,96 L60,95"/>
+    </g>
+    <g id="lapiz">
+      <path class="t" d="M0,0 L70,-70 L86,-54 L16,16 Z"/>
+      <path class="t fino" d="M0,0 L-10,26 L16,16"/>
+      <path class="t fino" d="M60,-60 L76,-44"/>
+    </g>
+    <g id="pila">
+      <path class="t papel" d="M16,-16 L126,-18 L128,110 L18,112 Z"/>
+      <path class="t papel" d="M8,-8 L118,-10 L120,118 L10,120 Z"/>
+      <path class="t papel" d="M0,0 L110,-2 L112,126 L2,128 Z"/>
+    </g>
+    <g id="grafico">
+      <path class="t" d="M0,0 L0,120 L130,120"/>
+      <path class="t" d="M22,120 L22,78 L44,78 L44,120 M60,120 L60,46 L82,46 L82,120 M98,120 L98,12 L120,12 L120,120"/>
+    </g>
+    <g id="lupa">
+      <circle class="t" cx="0" cy="0" r="28"/>
+      <path class="t" d="M20,20 L52,52"/>
+    </g>
+    <g id="calendario">
+      <path class="t" d="M0,0 L118,-3 L120,112 L2,114 Z"/>
+      <path class="t" d="M1,28 L119,26"/>
+      <path class="t fino" d="M28,-14 L28,10 M90,-15 L90,9"/>
+      <path class="t" d="M34,70 L54,90 L90,46"/>
+    </g>
+    <g id="reloj">
+      <circle class="t" cx="0" cy="0" r="30"/>
+      <path class="t fino" d="M0,0 L0,-18 M0,0 L14,8"/>
+    </g>
+    <g id="nube">
+      <path class="t" d="M-70,10 C-96,6 -92,-30 -64,-30 C-60,-56 -24,-60 -10,-42 C6,-62 46,-58 50,-32 C80,-34 92,0 66,12 C70,36 36,46 20,30 C6,48 -30,48 -40,30 C-62,40 -84,28 -70,10 Z"/>
+    </g>
+    <g id="llave">
+      <circle class="t" cx="0" cy="0" r="20"/>
+      <path class="t" d="M20,0 L86,0 M66,0 L66,18 M80,0 L80,14"/>
+    </g>
+    <g id="monigote-triste">
+      <circle class="t" cx="0" cy="0" r="30"/>
+      <circle class="relleno" cx="-10" cy="-6" r="3.5"/><circle class="relleno" cx="10" cy="-6" r="3.5"/>
+      <path class="t fino" d="M-13,16 Q0,5 13,16"/>
+      <path class="t" d="M0,30 L1,120"/>
+      <path class="t" d="M-40,70 L0,64 L40,72"/>
+      <path class="t" d="M-30,198 L1,120 L32,198"/>
+    </g>
+  </defs>
+
+  <g filter="url(#trazo)">
+    <text class="titulo" x="540" y="112" text-anchor="middle">La IA acorta la espera</text>
+    <path class="t" d="M200,140 C420,132 660,148 880,136"/>
+    <text class="nota" x="540" y="192" text-anchor="middle">(y el médico siempre tiene la última palabra)</text>
+
+    <path class="t punteado" d="M540,240 L540,1240"/>
+
+    <!-- Izquierda: camino tradicional -->
+    <text class="nombre" x="270" y="282" text-anchor="middle">Camino tradicional</text>
+    <use href="#monigote-triste" transform="translate(95,350) scale(.55)"/>
+    <use href="#monigote-triste" transform="translate(180,350) scale(.55)"/>
+    <use href="#monigote-triste" transform="translate(265,350) scale(.55)"/>
+    <use href="#monigote-triste" transform="translate(350,350) scale(.55)"/>
+    <use href="#reloj" x="462" y="352"/>
+    <text class="mini" x="230" y="505" text-anchor="middle">horas de fila</text>
+    <path class="t" d="M270,528 L270,588" marker-end="url(#punta)"/>
+    <g transform="translate(110,622)"><path class="t" d="M0,0 L118,-3 L120,112 L2,114 Z"/><path class="t" d="M1,28 L119,26"/><path class="t fino" d="M28,-14 L28,10 M90,-15 L90,9"/></g>
+    <path class="t" d="M142,668 L198,716 M198,668 L142,716"/>
+    <text class="nota" x="262" y="672">cita en</text>
+    <text class="nota" x="262" y="712">semanas</text>
+    <path class="t" d="M270,762 L270,822" marker-end="url(#punta)"/>
+    <use href="#pila" x="110" y="866"/>
+    <text class="nota" x="268" y="912">examen y</text>
+    <text class="nota" x="268" y="952">más espera</text>
+    <path class="t" d="M270,1012 L270,1112" marker-end="url(#punta)"/>
+    <text class="nombre grande" x="270" y="1176" text-anchor="middle">llega tarde</text>
+    <text class="mini" x="270" y="1226" text-anchor="middle">(días o semanas)</text>
+
+    <!-- Derecha: con apoyo de IA -->
+    <text class="nombre" x="810" y="282" text-anchor="middle">Con apoyo de IA</text>
+    <use href="#monigote" transform="translate(690,350) scale(.6)"/>
+    <path class="t" d="M724,334 L758,333 L760,396 L726,397 Z"/>
+    <path class="t fino" d="M736,386 L748,386"/>
+    <text class="mini" x="790" y="358">pide su cita y</text>
+    <text class="mini" x="790" y="392">cuenta sus</text>
+    <text class="mini" x="790" y="426">síntomas</text>
+    <text class="mini" x="790" y="460">desde el celular</text>
+    <path class="t" d="M810,500 L810,560" marker-end="url(#punta)"/>
+    <use href="#nube" x="810" y="642"/>
+    <text class="mini" x="810" y="634" text-anchor="middle">la imagen</text>
+    <text class="mini" x="810" y="666" text-anchor="middle">viaja</text>
+    <path class="t" d="M810,706 L810,762" marker-end="url(#punta)"/>
+    <path class="t" d="M702,784 L918,781 L921,880 L704,883 Z"/>
+    <path class="t" d="M682,883 L940,880 L960,906 L662,909 Z"/>
+    <text class="pantalla txt-acento" x="811" y="832" text-anchor="middle">IA</text>
+    <text class="mini" x="811" y="866" text-anchor="middle">primera lectura</text>
+    <path class="t" d="M810,920 L810,966" marker-end="url(#punta)"/>
+    <use href="#monigote" transform="translate(720,996) scale(.55)"/>
+    <text class="nota" x="784" y="1028">el médico</text>
+    <text class="nota" x="784" y="1068">confirma</text>
+    <path class="t acento" d="M936,1046 L958,1070 L1000,1010"/>
+    <text class="nombre grande txt-acento" x="810" y="1176" text-anchor="middle">llega a tiempo</text>
+    <text class="mini" x="810" y="1226" text-anchor="middle">(el mismo día)</text>
+
+    <text class="fuente" x="540" y="1272" text-anchor="middle">Ilustración basada en el modelo presentado por el gobierno de México (24/11/2026)</text>
+  </g>
+</svg>
+</section>
+
+</body>
+</html>
