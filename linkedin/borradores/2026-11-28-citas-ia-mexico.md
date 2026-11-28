@@ -1,17 +1,17 @@
 # Borrador: lo que México aprendió de China y lo que el Perú podría adaptar (pilar: reforma de trámites y gestión pública)
 
-Estado: borrador para revisión (versión 2, tono didáctico y conciliador). NO publicado.
+Estado: borrador para revisión (versión 3: gancho cambiado tras verificar la telemamografía). NO publicado.
 Cuenta: perfil personal (por confirmar). Formato: texto. Sin emojis ni hashtags.
 Relación: mismo tema que `2026-11-05-seguro-social.md`; publicar solo uno o dejar una semana entre ellos.
 
 ## Ganchos
 
-- **A · Escena positiva (recomendado):** «Una mamografía tomada en Huancayo puede ser leída por especialistas del INEN, en Lima, sin que la paciente tenga que viajar. El Perú ya dio ese primer paso.»
+- **A · Logro peruano con cifra oficial (recomendado):** «En el primer semestre de 2026, más de 7 600 mujeres en el Perú accedieron a un diagnóstico de cáncer de mama rápido y gratuito, con mamografías leídas a distancia. El Perú ya dio ese primer paso.»
 - **B · Cifra con mirada humana:** «3,9 millones de atenciones pendientes en consulta externa. Detrás de esa cifra hay personas, y también una oportunidad.»
 
 ## Post (con el gancho A)
 
-Una mamografía tomada en Huancayo puede ser leída por especialistas del INEN, en Lima, sin que la paciente tenga que viajar. El Perú ya dio ese primer paso.
+En el primer semestre de 2026, más de 7 600 mujeres en el Perú accedieron a un diagnóstico de cáncer de mama rápido y gratuito, con mamografías leídas a distancia. El Perú ya dio ese primer paso.
 
 Volví a pensar en ello al revisar una conferencia reciente del gobierno de México. Sus autoridades visitaron hospitales en Shenzhen, China, y regresaron con dos acuerdos: instalar un primer hospital inteligente y enviar médicos a formarse allá.
 
@@ -36,7 +36,8 @@ Lo comprobé al rediseñar el proceso del pasaporte. Cuando un servicio se mide 
 ## Primer comentario (fuentes)
 
 Para quien quiera profundizar:
-Telerradiología mamaria Minsa–INEN: https://consultorsalud.com/telemedicina-peru-inversion-avances-brechas/
+Minsa, telemamografía en el primer semestre de 2026: https://www.gob.pe/institucion/minsa/noticias/1424217-primer-semestre-2026-ministerio-de-salud-permitio-que-7600-mujeres-del-pais-accedan-a-diagnosticos-de-cancer-de-mama-rapidos-y-gratuitos
+INEN, teleconsultas y telemamografía: https://www.gob.pe/institucion/inen/noticias/1423727-mas-de-270-mil-teleconsultas-consolidan-al-inen-como-referente-en-la-atencion-oncologica-especializada-en-las-regiones-del-pais
 EsSalud, atenciones pendientes (29/09/2026): https://www.gob.pe/institucion/essalud/noticias/1450779-essalud-amplia-horarios-de-atencion-y-activa-hospital-peru-para-reducir-listas-de-espera
 Lineamientos del Minsa para el uso de la IA: https://elperuano.pe/noticia/306287-minsa-aprueba-lineamientos-para-el-uso-seguro-y-etico-de-la-ia-en-el-sector-salud
 
@@ -49,7 +50,11 @@ Lineamientos del Minsa para el uso de la IA: https://elperuano.pe/noticia/306287
 
 ## Notas de verificación
 
-- Huancayo–INEN: proyecto de telerradiología mamaria del Minsa (2023 a marzo de 2025), según Consultor Salud. Confirmar que siga operando antes de publicar.
+- Verificación del 28/11/2026 (por buscador; las páginas no se pudieron abrir desde esta sesión):
+  - Confirmado por varias fuentes: el Minsa reporta que en el primer semestre de 2026 unas 7 600 mujeres accedieron a diagnósticos de cáncer de mama rápidos y gratuitos (título del comunicado oficial); según Diario Correo, son 7 685 telemamografías de enero a julio, con 29 mamógrafos digitales conectados en 17 regiones.
+  - Confirmado: el INEN lee mamografías a distancia por la plataforma Teleatiendo desde 2025 (más de 3 000 lecturas) y siguió recibiendo imágenes en 2026 (nota de Áncash del 25/11/2026: Hospital de Pomabamba; 18 radiólogos regionales capacitados).
+  - No confirmado: que Huancayo y Magdalena sigan enviando imágenes (solo aparecen en un proyecto de 2023 a marzo de 2025); por eso se quitó Huancayo del gancho.
+  - No confirmado: el uso de inteligencia artificial en la telemamografía peruana. Lo mencionan resúmenes de buscador sobre notas del Minsa y del INEN, pero no se pudo leer el texto. El post no afirma que el Perú use IA en mamografías.
 - Acuerdos de México con China (hospital inteligente y formación de médicos): transcripción, 51:44 a 52:52.
 - Lectura de imágenes con IA y confirmación por el médico: transcripción, 1:00:35 a 1:01:55.
 - Aplicación con citas y orientación de síntomas: transcripción, 1:09:07 a 1:09:51.
